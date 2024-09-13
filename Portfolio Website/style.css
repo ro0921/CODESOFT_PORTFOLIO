@@ -1,0 +1,614 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #ffffff;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+/* General Navbar Styles */
+nav {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(8, 5, 5);
+  padding: 20px 50px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensure it stays on top */
+}
+
+/* Left Section */
+nav .left {
+  display: flex;
+  align-items: center;
+}
+
+nav .left .logo {
+  height: 50px; /* Adjust the size of the logo as needed */
+  margin-right: 15px; /* Space between the logo and the text */
+}
+
+nav .left span {
+  color: #fff;
+  font-size: 2rem; /* Keep a good size for readability */
+  font-family: 'Great Vibes', cursive; /* Updated to a more delicate handwriting font */
+  font-weight: normal; /* Ensures it's not too bold */
+  word-spacing: 10px;
+}
+
+/* Right Section */
+nav .right ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav .right ul li {
+  margin: 0 15px; /* Adjust spacing */
+}
+
+nav .right ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+nav .right ul li a i {
+  margin-right: 8px; /* Space between icon and text */
+}
+
+nav .right ul li a:hover {
+  color: #ffda79; /* Change to a highlight color */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Active Link Style */
+nav .right ul li a.active {
+  border-bottom: 2px solid #ffda79; /* Active link indicator */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stack elements */
+    padding: 15px;
+  }
+
+  .right ul {
+    flex-direction: column; /* Stack menu items vertically */
+    text-align: center;
+  }
+
+  .right ul li {
+    margin: 10px 0; /* More spacing for mobile */
+  }
+}
+
+.firstSection {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: -300px;
+  padding-bottom: 6px;
+  margin-bottom: 70px;
+  background-color: white;
+  margin-left: 111px;
+  
+}
+
+.resume-btn {
+  margin-top: 20px; /* Adds space above the button */
+  padding: 15px 20px; /* Adds padding inside the button */
+  background: #a663e5; /* Purple color */
+  color: whitesmoke; /* Text color */
+  border: none; /* Removes default border */
+  border-radius: 10px; /* Rounded corners */
+  cursor: pointer; /* Changes cursor to pointer on hover */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  display: inline-block; /* Ensure the button stays in line */
+  word-spacing: 1.5px;
+}
+
+.resume-btn:hover {
+  background-color: darkorchid/* Darker purple on hover */
+}
+
+
+
+.firstSection > div {
+  
+  color: rgb(0, 0, 0);
+}
+
+.leftSection {
+  font-size: 3rem;
+  margin-top: 200px;
+  margin-left:--80px;
+}
+
+.rightSection {
+  flex: 1; /* Takes full available space */
+  display: flex;
+  justify-content: center; /* Centers the image horizontally */
+  align-items: center; /* Centers the image vertically */
+  overflow: hidden; /* Prevents overflow */
+  padding: 20px; /* Adjust padding if needed */
+  margin-top: -71px; /* Adjusts position */
+}
+
+.rightSection img {
+  width: 80%;
+  margin: 30px 0 100px; /* Adjusted margin to make the image more centered */
+  margin-top: -31px;
+  border-radius: 500px; /* Optional: Rounded corners */
+  box-shadow: 0 30px 100px #dcb6ff; /* Adds shadow effect */
+  object-fit: cover; /* Keeps aspect ratio */
+}
+
+
+
+
+
+
+
+.purple {
+  color: rgb(200, 141, 255);
+}
+
+.text-gray {
+  color: gray;
+}
+
+#element {
+  color: rgb(200, 141, 255);
+}
+
+#about {
+  text-align: center; /* Center align all contents of the section */
+  padding: 50px 20px; /* Adjust padding as needed */
+}
+
+
+.section-title {
+  display: block; /* Ensure it takes full width */
+  text-align: center; /* Center the text */
+  font-size: 2.5em; /* Adjust size as needed */
+  margin-bottom: 20px; /* Space between the title and the content below */
+  color: #333; /* Adjust color as needed */
+}
+
+.about-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  background-color: rgb(255, 255, 255);
+  
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1400px;
+  padding: 100px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  background: url('webdeveloper.jpg') no-repeat center center; /* Add background image */
+  background-size: cover; /* Cover the entire content area */
+  color: white; /* Ensures text is visible on the image */
+  position: relative; /* Make content position relative for layering */
+  z-index: 1; /* Set layering for elements */
+}
+
+/* Optional: Dark overlay to make text more readable */
+.about-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Adjust darkness level */
+  border-radius: 15px; /* Ensures rounded corners on the overlay */
+  z-index: 0; /* Puts the overlay behind the content */
+}
+
+
+.about-content img {
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.profile {
+  flex: 1;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.profile, .skills {
+  position: relative; /* Ensure content is above the background image */
+  z-index: 1;
+}
+
+.profile h2 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.profile p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.hire-btn {
+  padding: 10px 20px;
+  background: #a663e5;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 50ms ease;
+  margin-bottom: 15px;
+}
+
+.hire-btn:hover {
+  background-color: darkorchid;
+}
+
+.skills {
+  flex: 2;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.skill-name {
+  flex: 1;
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+
+.skill-bar {
+  flex: 3;
+  height: 8px;
+  background: #ffffff;
+  border-radius: 5px;
+  margin: 0 10px;
+  position: relative;
+}
+
+.skill-progress {
+  height: 100%;
+  background: #a663e5;
+  border-radius: 5px;
+  position: absolute;
+}
+
+.skill-level {
+  flex: 0.5;
+  font-size: 0.8rem;
+  color: #ffffff;
+}
+
+/* Initial state before the animation */
+.text-animation {
+  opacity: 0; /* Start hidden */
+  transform: translateX(20vw); /* Start off-screen to the right */
+  transition: transform 3s ease-out 1s, opacity 3s ease-out 1s; /* 2s duration, 1s delay */
+}
+
+/* When in view (triggered by JavaScript) */
+.text-animate-in {
+  opacity: 1; /* Fully visible */
+  transform: translateX(0); /* Move to original position */
+}
+
+.projects-section {
+  padding: 50px;
+  background: rgb(255, 255, 255);
+
+  text-align: center;
+}
+
+.projects-section h2 {
+  font-size: 2rem;
+  color: rgb(0, 0, 0);
+  margin-bottom: 30px;
+  padding: 80px 50px;
+  margin-top: 50px;
+}
+
+.projects-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px; /* Maintain the gap between the boxes */
+  max-width: 1200px; /* Width of the container */
+  margin: 0 auto; /* Center the container */
+  padding: 0 20px; /* Optional: Add some padding to the sides */
+}
+
+.project-box {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 15px 15px 15px  rgba(0, 0, 0, 0.1);
+  flex: 1; /* Make the boxes responsive */
+  max-width: 350px; /* Optional: Set a maximum width for each box */
+  height: 250px; /* Set the height to create a rectangular shape */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-box i {
+  font-size: 2rem;
+  color: #a663e5;
+  margin-bottom: 15px;
+}
+
+.project-box h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.project-box p {
+  font-size: 1rem;
+  color: #666;
+  text-align: center; /* Center the text */
+}
+
+.project-box:hover {
+  background-color: #a663e5;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.project-box:hover i {
+  color: #ffffff;
+}
+
+#contact {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 33, 0.8),
+    rgba(200, 141, 255, 0.7)
+  );
+
+  /* Light, cool background color */
+  padding: 60px 0;
+}
+
+#contact .container {
+  max-width: 1200px; /* Increased width for the container */
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contact h2 {
+  text-align: center;
+  color: #333;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+#contact p {
+  text-align: center;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.contact-form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 300px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background for the box */
+  border-radius: 10px;
+  
+  color: #333;
+  transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.contact-info:hover {
+  background-color: #a663e5; /* New background color on hover */
+  transform: translateY(-10px); /* Slight lift effect on hover */
+  background: linear-gradient(to right white black);
+}
+
+.contact-info h3 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #a663e5;
+}
+
+.contact-info i {
+  color: #007bff;
+  margin-right: 10px;
+}
+
+.contact-info p i {
+  vertical-align: middle;
+}
+
+/* Apply hover color changes to all elements inside .contact-info */
+.contact-info:hover h3,
+.contact-info:hover p,
+.contact-info:hover p i,
+.contact-info:hover i {
+  color: #fff; /* Change text and icon color on hover */
+}
+
+form {
+  flex: 2;
+  min-width: 400px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+form button {
+  padding: 15px 30px;
+  background-color: #6c63ff; /* Cool purple button */
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #5141c3;
+}
+
+.contact-info p {
+  display: inline-block;
+  margin-right: 20px; /* Ensure email and contact are side by side */
+}
+
+form input[name="name"],
+form input[name="email"] {
+  display: inline-block;
+  width: 49.7%;
+}
+
+form input[name="subject"] {
+  width: 100%;
+}
+
+form textarea {
+  height: 150px;
+  resize: none;
+}
+
+form input,
+form textarea {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+}
+
+form button {
+  background-color: #007bff; /* Primary color for the button */
+}
+
+form button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+.social-icons {
+  margin-top: 15px;
+}
+
+.social-icons a {
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.5);
+}
+
+.footer {
+  background-color: #000000; /* Dark background color */
+  color: #ffffff; /* White text color */
+  padding: 20px 0; /* Padding for top and bottom */
+  text-align: center; /* Center align text */
+  width: 100%; /* Full width */
+  position: relative; /* Position relative */
+  bottom: 0; /* Stick to the bottom */
+}
+
+.footer-content {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space between left and right content */
+  align-items: center; /* Align items vertically */
+  max-width: 1200px; /* Maximum width */
+  margin: 0 auto; /* Center align */
+  padding: 0 20px; /* Horizontal padding */
+}
+
+.footer-left {
+  font-size: 1rem; /* Font size */
+}
+
+.footer-right {
+  display: flex; /* Flexbox for icons */
+  gap: 15px; /* Space between icons */
+}
+
+.footer-icon {
+  color: #ffffff; /* Icon color */
+  font-size: 1.5rem; /* Icon size */
+  transition: color 0.3s; /* Transition for hover effect */
+}
+
+.footer-icon:hover {
+  color: #a663e5; /* Hover color */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column; /* Stack items on smaller screens */
+    text-align: center; /* Center align */
+  }
+  
+  .footer-right {
+    margin-top: 10px; /* Space between text and icons */
+  }
+}
+
